@@ -43,6 +43,9 @@ public class EmployeeView extends AppCompatActivity {
             if(employee.equalsIgnoreCase("Mila")){
                  showMila();
             }
+            if (employee.equalsIgnoreCase("Speaks")) {
+                showShawn();
+            }
 
             switch (employee) {
                 case "Lily":
@@ -118,6 +121,10 @@ public class EmployeeView extends AppCompatActivity {
 
     private void showHelen(){
         getFragmentManager().beginTransaction().add(R.id.employee_profile, new Helen()).commit();
+    }
+
+    private void showShawn(){
+        getFragmentManager().beginTransaction().add(R.id.employee_profile, new Shawn()).commit();
     }
     private void showAshique(){
         FragmentManager fragmentManager = getFragmentManager();
